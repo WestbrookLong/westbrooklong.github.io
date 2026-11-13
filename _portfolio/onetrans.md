@@ -2,6 +2,7 @@
 title: "OneTrans"
 collection: portfolio
 kind: research
+period: "PyTorch reimplementation · Mar–Apr 2026"
 order: 5
 permalink: /portfolio/onetrans/
 excerpt: "Ported a TensorFlow reference implementation into a modular training project, preserving heterogeneous feature tokenization and pyramid-style compression. Added schema-aware data loading, mixed precision, evaluation, and resumable checkpoints."

@@ -2,6 +2,7 @@
 title: "Chastream"
 collection: portfolio
 kind: project
+period: "May 2026 — Present"
 order: 2
 permalink: /portfolio/chastream/
 excerpt: "An Android conversation intelligence platform that turns recordings into speaker-attributed transcripts, structured summaries, participant viewpoints, and timelines. Built across the mobile client, asynchronous audio pipeline, and cloud backend."

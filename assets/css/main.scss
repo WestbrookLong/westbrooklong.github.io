@@ -36,3 +36,11 @@
     "layout/archive",
     "layout/sidebar"
 ;
+/* Keep the template footer below content rather than covering long pages. */
+.page__footer {
+  position: relative;
+  bottom: auto;
+}
+body {
+  padding-bottom: 0;
+}

@@ -2,6 +2,7 @@
 title: "AI Pet"
 collection: portfolio
 kind: project
+period: "Jul 2026 — Present"
 order: 1
 permalink: /portfolio/ai-pet/
 excerpt: "A desktop companion with a tool-using agent loop and persistent personality. An evidence-governed memory pipeline combines structured updates, deterministic validation, and hybrid retrieval to keep context across sessions."

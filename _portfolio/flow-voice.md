@@ -2,6 +2,7 @@
 title: "Flow Voice"
 collection: portfolio
 kind: project
+period: "Apr 2026 — Present"
 order: 3
 permalink: /portfolio/flow-voice/
 excerpt: "An open-source system that streams smartphone speech recognition directly into the active text cursor on Windows. Prefix matching and final-transcript reconciliation keep evolving speech results aligned without duplicate text."

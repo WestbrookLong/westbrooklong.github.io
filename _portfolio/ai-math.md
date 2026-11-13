@@ -2,6 +2,7 @@
 title: "AI Mathematical Olympiad"
 collection: portfolio
 kind: research
+period: "Kaggle competition · 2024"
 order: 6
 permalink: /portfolio/ai-math/
 excerpt: "Silver Medal, ranked 92nd of 2,212 teams (top 4.2%). Contributed an inference truncation strategy and data augmentation using bidirectional translation and LLM-generated mathematical samples."

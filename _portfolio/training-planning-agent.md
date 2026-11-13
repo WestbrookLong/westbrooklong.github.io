@@ -2,6 +2,7 @@
 title: "Training Planning Agent"
 collection: portfolio
 kind: project
+period: "Oct 2025 — Present"
 order: 4
 permalink: /portfolio/training-planning-agent/
 excerpt: "Agent architecture for a deployed personalized training platform serving 20 users. Retrieval grounds plans in professional training guidelines and workout history; an evaluation-feedback loop checks constraints and consistency."
