@@ -1,0 +1,12 @@
+---
+layout: archive
+title: "Research & Implementations"
+permalink: /research/
+author_profile: true
+---
+
+<p>Research reimplementations and competition work in recommendation systems and mathematical reasoning.</p>
+{% assign research = site.portfolio | where: "kind", "research" | sort: "order" %}
+{% for post in research %}
+  {% include archive-single.html %}
+{% endfor %}

@@ -1,49 +1,44 @@
-# Jianyu Long · Westbrook
+# Jianyu Long (Westbrook) — Academic Pages
 
-Personal projects and research portfolio. Static HTML, CSS, and a small JavaScript project filter; no framework or package installation required.
+Personal academic website at **https://westbrooklong.github.io/**, based on the [Academic Pages template](https://academicpages.github.io/) (upstream commit `8c57e1ae5da379512eb11165257fba02664b8531`). The original template license is retained in `LICENSE`.
 
-## Publishing pipeline
+## Update the website
 
-This repository is named `westbrooklong.github.io`, so GitHub Pages serves it at **https://westbrooklong.github.io/**.
+You can edit these files directly on GitHub. Commit your changes to `main`; GitHub Actions builds Jekyll and deploys the result automatically. No manual HTML generation is needed.
 
-The pipeline is:
+| Content | File |
+| --- | --- |
+| Name, sidebar, email, GitHub, site URL | `_config.yml` |
+| Top navigation | `_data/navigation.yml` |
+| Homepage / About | `_pages/about.md` |
+| Projects index | `_pages/portfolio.html` |
+| Research index | `_pages/research.html` |
+| Individual project and research pages | `_portfolio/*.md` |
+| CV | `_pages/cv.md` |
 
-```text
-Edit content.json → run python3 build.py → commit and push → GitHub Pages publishes
+Project entries use `kind: project`; research entries use `kind: research`. The `order` field controls ordering within each list. Template examples, placeholder publications, and unused navigation items are omitted.
+
+## Deployment
+
+Repository Settings → Pages → Source: **GitHub Actions**.
+
+The workflow in `.github/workflows/jekyll.yml` installs Ruby and Node, builds the template JavaScript, runs `bundle exec jekyll build`, and deploys `_site` to GitHub Pages. Check the repository's Actions tab for build results.
+
+The old static-page implementation remains recoverable in Git history at commit `7b3e0db985ea2ce91b38649df213ee4197120ec5`.
+
+## Local preview
+
+Requires Ruby 3.3+, Bundler, and Node.js:
+
+```sh
+bundle install
+npm install
+npm run build:js
+bundle exec jekyll serve --host 127.0.0.1
 ```
 
-Pages is configured to **Deploy from a branch**, using **main** and **/ (root)**. GitHub runs its Pages deployment automatically after a push. The `.nojekyll` file tells Pages to serve the static files directly.
+Open http://127.0.0.1:4000. Configuration changes require restarting Jekyll.
 
-To configure or inspect hosting, open the repository's **Settings → Pages**. To check deployment progress, open **Actions**, then the **pages build and deployment** run. Publishing can take several minutes.
+## Attribution
 
-## Make changes
-
-1. Edit `content.json` to change your introduction, projects, research, education, or experience.
-2. Run `python3 build.py` in this directory. This regenerates `index.html`.
-3. Preview with `python3 -m http.server 4173`, then visit http://localhost:4173.
-4. Commit `content.json` and the regenerated `index.html`, along with any other changes, and push to `main`.
-
-You can also edit `index.html` directly in GitHub and commit the change for a quick update. The next run of `build.py` will replace it with the content from `content.json`, so keep both in sync.
-
-For visual changes, edit `styles.css`. The project filter is in `script.js`. All project content remains visible with JavaScript disabled.
-
-## Files
-
-| File | Purpose |
-| --- | --- |
-| `content.json` | Editable profile and project content |
-| `build.py` | Standard-library-only page generator |
-| `index.html` | Generated page served by GitHub Pages |
-| `styles.css` | Responsive layout and visual design |
-| `script.js` | Accessible project filters and footer year |
-| `favicon.svg` | Site icon |
-| `.nojekyll` | Static-file publishing |
-
-## Content notes
-
-The initial content was adapted from the supplied CV. The OneTrans repository link uses the verified `OneTrans_Pytorch` repository name. University study at SUSTech is described without claiming a completed degree. No downloadable CV is included; the site uses the professional email address for contact.
-
-## Official GitHub documentation
-
-- [GitHub Pages quickstart](https://docs.github.com/en/pages/quickstart)
-- [Configure a publishing source](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
+[Academic Pages](https://github.com/academicpages/academicpages.github.io), derived from [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/), under the MIT License.

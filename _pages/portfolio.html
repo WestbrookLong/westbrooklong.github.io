@@ -1,0 +1,14 @@
+---
+layout: archive
+title: "Projects"
+permalink: /portfolio/
+author_profile: true
+redirect_from:
+  - /projects/
+---
+
+<p>Selected projects in AI agents, persistent memory, and voice interfaces.</p>
+{% assign projects = site.portfolio | where: "kind", "project" | sort: "order" %}
+{% for post in projects %}
+  {% include archive-single.html %}
+{% endfor %}
